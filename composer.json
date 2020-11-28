@@ -1,0 +1,37 @@
+{
+    "name": "progjp/nbu-currency-api",
+    "description": "Get currency rate from NBU API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Zavialov",
+            "email": "zavyalovroman@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2",
+        "symfony/var-dumper": "^4.3",
+        "phpstan/phpstan": "^0.11.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "analyze": "vendor/bin/phpstan analyse src --level=5",
+        "test": "vendor/bin/phpunit"
+    }
+}
